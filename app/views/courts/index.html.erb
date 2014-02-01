@@ -1,0 +1,26 @@
+<h1>Welcome to the Tennis Club!</h1>
+<br />
+<p id="notice"><%= notice %></p>
+<p>Tennis courts available for booking:</p>
+<br />
+<br />
+<table>
+	<thead>
+		<tr>
+			<th>Court</th>
+			<th>Booking Status</th>
+			<th class="edit_column"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @courts.each do |court| %>
+		<tr>
+			<td>Court <%= court.number %></td>
+			<td><%= court.booked ? "booked" : "open"%></td>
+			<td class="edit_column"><%= link_to 'Edit', edit_court_path(court) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br />
+<%= link_to 'Create new court', new_court_path %>

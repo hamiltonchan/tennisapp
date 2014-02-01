@@ -1,0 +1,15 @@
+<h1>Add a tennis court</h1>
+<%= form_for @court do |f| %>
+<p>
+	<%= f.label :"Court Number: " %>
+	<%= f.text_field :number %>
+</p>
+<p>
+	<%= f.label :"Booked: " %>
+	<%= f.select :booked, [['booked', true], ['open', false]] %>
+</p>
+
+<p><%= f.submit %></p>
+<% end %>
+<br />
+<%= link_to 'Back', courts_path %>
