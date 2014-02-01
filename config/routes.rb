@@ -9,6 +9,7 @@ Tennisapp::Application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
 
   resources :courts
+  root 'courts#index'
   # get 'courts' => 'courts#index'
   # get 'courts/new' => 'courts#new'
   # post 'courts' => 'courts#create'
