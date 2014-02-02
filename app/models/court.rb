@@ -3,6 +3,6 @@ class Court
   field :number, type: Integer
   field :booked, type: Boolean
 
-  validates :number, numericality: true, presence: true
+  validates :number, numericality: true, presence: true, uniqueness: true
 
 end
