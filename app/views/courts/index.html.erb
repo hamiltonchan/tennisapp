@@ -9,7 +9,8 @@
 		<tr>
 			<th>Court</th>
 			<th>Booking Status</th>
-			<th class="edit_column"></th>
+			<th class="link_column"></th>
+			<th class="link_column"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -17,7 +18,8 @@
 		<tr>
 			<td>Court <%= court.number %></td>
 			<td><%= court.booked ? "booked" : "open"%></td>
-			<td class="edit_column"><%= link_to 'Edit', edit_court_path(court) %></td>
+			<td class="link_column"><%= link_to 'Edit', edit_court_path(court) %></td>
+			<td class="link_column"><%= link_to 'Remove', court, method: :delete, data: {confirm: 'Are you sure?' } %></td>
 		</tr>
 		<% end %>
 	</tbody>

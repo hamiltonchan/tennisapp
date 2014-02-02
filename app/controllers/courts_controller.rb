@@ -33,6 +33,11 @@ class CourtsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@court = Court.find(params[:id])
+		@court.destroy
+		redirect_to courts_url
+	end
 
 private
 
