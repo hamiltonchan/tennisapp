@@ -71,7 +71,7 @@ test:
 production:
   sessions:
     default:
-      uri: <%= ENV['mongodb://heroku_app21805267:4ftlrvnopfiv3169629nm2gqf9@ds027819.mongolab.com:27819/heroku_app21805267'] %>
+      uri: <%= ENV[mongodb://heroku_app21805267:4ftlrvnopfiv3169629nm2gqf9@ds027819.mongolab.com:27819/heroku_app21805267] %>
       options:
         consistency: :strong
         max_retries: 30
